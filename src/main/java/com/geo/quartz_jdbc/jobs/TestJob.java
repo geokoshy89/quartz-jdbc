@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 public class TestJob implements Job {
 
   @Override
-  public void execute(JobExecutionContext context) throws JobExecutionException {
-    System.out.println("Scheduled job is running for job with different change" + context.getJobDetail().getKey()+ " "+ context.getScheduledFireTime());
+  public void execute(JobExecutionContext context) {
+    System.out.println("Scheduled job is running for job with new change" + context.getJobDetail().getKey()+ " "+ context.getScheduledFireTime());
   }
 
 }
